@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <style>
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(255, 69, 103), rgb(235, 193, 154));
+            text-align: center;
+            color: white;
+        }
+        .container
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 1em;
+            border-radius: 10px;
+        }
+        button
+        {
+            background-color: darkblue;
+            color: white;
+            padding: 8px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover
+        {
+            background-color: lightskyblue;
+        }
+        .first-step,
+        .second-step{
+            display: none;
+        }
+        input
+        {
+            padding: 8px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Matheus Silva</h1>
+    <div class="container">
+        <div class="first-step">
+                <p>Clique em Iniciar para calcular</p>
+                <button>Iniciar</button>
+        </div>
+        <div class="second-step">
+            <h3>Calcule seu IMC</h3>
+            <hr>
+            <label for="peso">Digite seu peso:</label>
+            <input type="number" placeholder="Seu peso" id="peso">
+            <br><br>
+            <label for="">Digite sua altura:</label>
+            <input type="number" placeholder="Sua altura" id="altura">
+            <br><br>
+            <button>Calcular</button>
+        </div>
+        <div class="final-step">
+            <h3>Seu IMC é </h3>
+            <p id="Seu IMC é">...</p>
+            <br><br>
+            <button>Calcular novamente</button>
+            <button>Retomar ao início</button>
+        </div>
+    </div>
+</body>
+</html>
