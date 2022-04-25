@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEADER Matheus</title>
+    <style>
+        :root
+        {
+            --color-white:white;
+            --color-dark:rgb(43, 37, 36);
+            --color-lightblue:rgb(96, 126, 225);
+            --color-brown:rgb(72, 18, 18);
+        }
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:var(--color-dark);
+            color:var( --color-white)
+        }
+        .header,
+        .navigation_header
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .header
+        {
+            background-color: var(--color-lightblue);
+            box-shadow: 1px 1px 4px var(--color-gray);
+            height: 56px;
+            justify-content: space-between; 
+            padding: 0 11.5%;
+        }
+        .navigation_header
+        {
+            gap: 247px;
+        }
+        .navigation_header a
+        {
+            text-decoration: none;
+            color: var(--color-brown);
+            transition: 0.3s;
+            font-weight: bold;
+        }
+        .active
+        {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" id="header">
+        <div class="navigation_header">
+            <a href="#" class="active">Home</a>
+            <a href="#" class="active">Cursos</a>
+            <a href="#" class="active">Sobre Nós</a>
+            <a href="#" class="active">Contato</a>
+
+        </div>
+    </div>
+</body>
+</html>
