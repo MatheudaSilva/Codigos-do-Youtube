@@ -1,0 +1,51 @@
+body{
+    background-color: #90cde6; /* cor de fundo do código*/
+    font-family: Arial, Helvetica, sans-serif; /*escolha da fonte para o código*/
+    font-size: 15px; /*tamanho da fonte */
+    text-indent: 4px; /*usado para o recuo do texto*/
+}
+h1{
+    font-size: 150%; /*tamanho da fonte */
+    color: aliceblue; /* cor de fundo*/
+    text-align: center; /*alinhar o texto*/
+    text-transform: uppercase; /* o texto em caixa alta*/
+    margin-top: 50px; /*margem do elemento em relação ao documento*/ 
+    margin-left: 70px; /*margem do elemento em relação ao documento*/
+    margin-bottom: 10px; /*margem do elemento em relação ao documento*/
+    margin-right: 40px; /*margem do elemento em relação ao documento*/
+}
+p{
+    color:#89A010; /* cor de fundo*/
+    border: black 3px solid ; /*borda com propriedades de cor, espessura e visualização*/
+    padding: 4px 4px 4px 4px;
+    position: relative;
+}
+li{
+    color: gray; /* cor de fundo*/
+    text-decoration: underline black; /* usado para colocar um sublinhado de cor preta*/
+    text-transform: lowercase; /* usado para por todos com letras minúsculas*/
+
+}
+h2{
+    color:cornflowerblue; /* cor do h2*/
+    text-align: justify; /* deixa o texto justificado*/
+    text-decoration: overline black; /* usado para por uma linha sobre os textos de cor preta*/
+    text-transform: capitalize; /* usado para por a primeira letra de cada palavra maiúscula*/ 
+    font-size: 120%; /*tamanho da fonte */
+}
+.dir{
+    list-style-type: lower-alpha; /*coloca marcadores com letras em caixa baixa*/
+}
+.esq{
+    list-style-type: upper-roman; /*coloca marcadores com números em romanos*/
+}
+.nope{
+    color:black; /*cor do texto*/
+    font-size: 200%; /*tamanho da fonte */
+}
+.hour{
+    color:black; /*cor do texto*/
+    font-family: 'Times New Roman', Times, serif; /*tipo de fonte*/
+    font-size: 200%; /*tamanho da fonte */
+}
+
