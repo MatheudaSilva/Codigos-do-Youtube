@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        canvas{
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // vars usadas para construção
+        var canvas, ctx, ALTURA, LARGURA, frames = 0,
+        chao = 
+        {
+            y:550, // Quanto do elemento será usado pela var chão 
+            altura: 50, // Altura da var chão
+            cor: "#ffdf70", // Cor atribuída a var chão 
+
+            desenha: function(){ // Funcão usada para desenhar na tela a var chão
+                ctx.fillStyle = this.cor; // Indica que a cor acima atribuída deve ser adicionada a var chão
+                ctx.fillRect = (0, this.y, LARGURA, this.altura); // Indica que a var chão recebe quanto será usado do elemento, sua largura no elemento e sua altura atribuída acima
+            }
+        }
+        
+        ;
+
+        function main()
+        {
+            ALTURA = window.innerHeight;
+            LARGURA = window.innerWidth;
+
+            if(LARGURA >=500){
+                LARGURA = 600;
+                ALTURA = 600;
+            }
+
+            canvas = document.createElement("canvas");
+            canvas.width = LARGURA;
+            canvas.height = ALTURA;
+            canvas.style.border = "1px solid #000";
+
+            ctx = canvas.getContext("2d");
+            document.body.appendChild(canvas);
+            document.addEventListener("mousedown", clique);
+
+            roda();
+        }
+        function clique(evt)
+        {
+            alert("Clicou");
+        }
+        function roda()
+        {
+            atualiza();
+            desenha();
+
+            window.requestAnimationFrame(roda);
+        }
+        function atualiza()
+        {
+            frames++;
+        }
+        function desenha()
+        {
+            ctx.fillStyle = " #50beff";
+            ctx.fillRect(0, 0, LARGURA, ALTURA);
+        }
+
+        main(); // inicializa o jogo
+    </script>
+</body>
+</html>

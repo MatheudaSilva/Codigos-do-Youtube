@@ -6,114 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
+        *{ /* atribuído a todos os elementos do site */
+            margin: 0; /* margem utilizada para todo o corpo do site */
+            padding: 0; /* Distancia do conteúdo em relação a borda */ 
         }
-        .fundo{
-            background-image: linear-gradient(45deg, white, yellowgreen) ;
-            height: 100vh;
-            color: darkcyan;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
+        .fundo{ /* atribuído ao fundo do site */
+            background-image: linear-gradient(45deg, white, yellowgreen); /* cor atribuída ao fundo do site */
+            height: 100vh; /* altura do fundo do site */
+            color: darkcyan; /* cor adicionada aos elementos de letras, números e caracteres do site */
+            font-family: Arial, Helvetica, sans-serif; /* fonte usada no site */
+            text-align: center; /* onde o texto do site será alinhado */
         }
-        .Calculadora{
-            position: absolute;
-            background-color: rgba(0, 0, 0, 1);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            border-radius: 15px;
-            padding: 15px;
+        .Calculadora{ /* atribuído ao elemento calculadora */
+            position: absolute; /* usado para indicar que ficará em uma posição fixa */
+            background-color: rgba(0, 0, 0, 1); /* cor atribuída ao elemento */
+            top: 50%; /* distancia do topo da página */
+            left: 50%; /* distancia da esquerda da página */
+            transform: translate(-50%,-50%); /* usado para corrigir e centralizar o elemento */
+            border-radius: 15px; /* arredondamento das bordas */
+            padding: 15px; /* Distancia dos itens em relação a borda */
         }
-        .botao{
-            width: 50px;
-            height: 50px;
-            font-size: 25px;
-            cursor: pointer;
-            margin: 3px;
-            background-color: rgb(31,31,31);
-            border: none;
-            color: darkcyan;
+        .botao{  /* atribuído aos botões da calculadora */
+            width: 50px; /* largura dos botões */
+            height: 50px; /* altura dos botões */
+            font-size: 25px; /* tamanho da fonte dos botões */
+            cursor: pointer; /* mudança do cursor ao passar sobre os botões */
+            margin: 3px; /* distancia dos botões */
+            background-color: rgb(31,31,31); /* cor dos botões */
+            border: none; /* retira a borda dos botões */
+            color: darkcyan; /* cor dos caracteres nos botões */
         }
-        .botao:hover{
-            background-color: black;
+        .botao:hover{ /* sombreado ao passar o mouse sobre o botão */
+            background-color: black; /* cor do sombreado */
         }
-        #resultado{
-            background-color: white;
-            width: 215px;
-            height: 30px;
-            margin: 5px;
-            font-size: 25px;
-            color: black;
-            text-align: right;
-            padding: 5px;
+        #resultado{ /* onde aparacera o valor da equação */
+            background-color: white; /* cor atribuída onde aparecera o resultado */
+            width: 215px; /* largura do elemento */
+            height: 30px; /* altura do elemento */
+            margin: 5px; /* distancia do elemento em relação aos botões e a borda */
+            font-size: 25px; /* tamanho da fonte do elemento */
+            color: black; /* cor do valor da equação */
+            text-align: right; /* alinha o texto a direita do elemento */
+            padding: 5px; /* Distancia entre a parte de cima em relação a de baixo */
         }
     </style>
 </head>
 <body>
-    <div class="fundo">
-        <h1> MATHEUS SILVA</h1>
-        <div class="Calculadora">
-            <h1>Calculadora</h1>
-            <p id="resultado"></p>
+    <div class="fundo"> <!-- chamando a class com o nome fundo -->
+        <h1> MATHEUS SILVA</h1> <!-- título para a página-->
+        <div class="Calculadora"> <!-- chamando a class com o nome calculadora -->
+            <h1>Calculadora</h1> <!-- título de para a calculadora-->
+            <p id="resultado"></p> <!-- chamando o id com o nome resultado -->
             <table>
                 <tr>
-                    <td><button class="botao" onclick="clean()">C</button></td>
-                    <td><button class="botao" onclick="back()"><</button></td>
-                    <td><button class="botao" onclick="insert('/')">/</button></td>
-                    <td><button class="botao" onclick="insert('*')">x</button></td>
+                    <td><button class="botao" onclick="clean()">C</button></td> <!-- cria o botão, clicável e com sua função -->
+                    <td><button class="botao" onclick="back()"><</button></td> <!-- cria o botão, clicável e com sua função -->
+                    <td><button class="botao" onclick="insert('/')">/</button></td> <!-- cria o botão, clicável e com sua função -->
+                    <td><button class="botao" onclick="insert('*')">x</button></td> <!-- cria o botão, clicável e com sua função -->
                 </tr>
                 <tr>
-                    <td><button class="botao" onclick="insert('7')">7</button></td>
-                    <td><button class="botao" onclick="insert('8')">8</button></td>
-                    <td><button class="botao" onclick="insert('9')">9</button></td>
-                    <td><button class="botao" onclick="insert('-')">-</button></td>
+                    <td><button class="botao" onclick="insert('7')">7</button></td> <!-- cria o botão, clicável e com sua função -->
+                    <td><button class="botao" onclick="insert('8')">8</button></td> <!-- cria o botão, clicável e com sua função -->
+                    <td><button class="botao" onclick="insert('9')">9</button></td> <!-- cria o botão, clicável e com sua função -->
+                    <td><button class="botao" onclick="insert('-')">-</button></td> <!-- cria o botão, clicável e com sua função -->
                 </tr>
                 <tr>
-                    <td><button class="botao" onclick="insert('4')">4</button></td>
-                    <td><button class="botao" onclick="insert('5')">5</button></td>
-                    <td><button class="botao" onclick="insert('6')">6</button></td>
-                    <td><button class="botao" onclick="insert('+')">+</button></td>
+                    <td><button class="botao" onclick="insert('4')">4</button></td> <!-- cria o botão, clicável e com sua função -->
+                    <td><button class="botao" onclick="insert('5')">5</button></td> <!-- cria o botão, clicável e com sua função -->
+                    <td><button class="botao" onclick="insert('6')">6</button></td> <!-- cria o botão, clicável e com sua função -->
+                    <td><button class="botao" onclick="insert('+')">+</button></td> <!-- cria o botão, clicável e com sua função -->
                 </tr>
                 <tr>
-                    <td><button class="botao" onclick="insert('1')">1</button></td>
-                    <td><button class="botao" onclick="insert('2')">2</button></td>
-                    <td><button class="botao" onclick="insert('3')">3</button></td>
-                    <td rowspan="2"><button class="botao" style="height: 100px" onclick="calcular()">=</button></td>
+                    <td><button class="botao" onclick="insert('1')">1</button></td> <!-- cria o botão, clicável e com sua função -->
+                    <td><button class="botao" onclick="insert('2')">2</button></td> <!-- cria o botão, clicável e com sua função -->
+                    <td><button class="botao" onclick="insert('3')">3</button></td> <!-- cria o botão, clicável e com sua função -->
+                    <td rowspan="2"><button class="botao" style="height: 100px" onclick="calcular()">=</button></td> <!-- cria o botão, clicável, com altura e com sua função -->
                 </tr>
                 <tr>
-                    <td colspan="2"><button class="botao" style="width: 100px" onclick="insert('0')">0</button></td>
-                    <td><button class="botao" onclick="insert('.')">.</button></td>
+                    <td colspan="2"><button class="botao" style="width: 100px" onclick="insert('0')">0</button></td> <!-- cria o botão, clicável, com largura e com sua função -->
+                    <td><button class="botao" onclick="insert('.')">.</button></td> <!-- cria o botão, clicável e com sua função -->
                 </tr>
             </table>
         </div>
     </div>
     <script>
-        function insert(num)
+        function insert(num) // chama a função para inserir um número
         {
-           var numero = document.getElementById('resultado').innerHTML; 
-           document.getElementById('resultado').innerHTML = numero + num
+           var numero = document.getElementById('resultado').innerHTML; // indica que ao clicar, o número será adicionado no elemento resultado
+           document.getElementById('resultado').innerHTML = numero + num // indica que o número indicado será atribuído a var num mais a var número em relação a operação escolhida 
         }
-        function clean()
+        function clean() // chama a função para limpar
         {
-            document.getElementById('resultado').innerHTML = "";
+            document.getElementById('resultado').innerHTML = ""; // indica que ao clicar limpa o número e deixa o branco
         }
-        function back()
+        function back()  // chama a função para limpar o número 
         {
-            var resultado = document.getElementById('resultado').innerHTML;
-            document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+            var resultado = document.getElementById('resultado').innerHTML; // indica que apagará do elemento resultado o número
+            document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1); // indica que apagará do elemento resultado o último número 
         }
-        function calcular()
+        function calcular()  // chama a função para calcular os valores
         {
-            var resultado = document.getElementById('resultado').innerHTML;
-            if(resultado)
+            var resultado = document.getElementById('resultado').innerHTML;  // indica que irá calcular no elemento resultado o número
+            if(resultado) // condição se na var resultado
             {
-                document.getElementById('resultado').innerHTML = eval(resultado)
+                document.getElementById('resultado').innerHTML = eval(resultado) // se adicionar um número, sua equação e outro número ao clicar no botão igual mostrará o resultado no elemento
             }
-            else
+            else // condição senão na var resultado
             {
-                document.getElementById('resultado').innerHTML = ""
+                document.getElementById('resultado').innerHTML = "" // se não adicionar outro número, mantém em branco e não mostra o resultado
             }
         }
     </script>

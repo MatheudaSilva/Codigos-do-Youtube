@@ -6,52 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        body
+        body /* adicionado ao todo o corpo do site */
         {
-            font-family: Arial, Helvetica, sans-serif;
-            background-image: linear-gradient(45deg, darkblue, aliceblue);
+            font-family: Arial, Helvetica, sans-serif; /* fonte do site */
+            background-image: linear-gradient(45deg, darkblue, aliceblue); /* cor adicionada ao site */
         }
-        .botao
+        .botao /* adicionado ao botão*/
         {
-            background-color: antiquewhite;
-            padding: 15px;
-            width: 100%;
-            border-radius: 15px;
-            font-size: 15px;
+            background-color: antiquewhite; /* cor adicionada ao botão*/
+            padding: 15px; /* distancia do topo a baixo do botão */
+            width: 100%; /* tamanho do botão */
+            border-radius: 15px; /* arredondamento da borda */
+            font-size: 15px; /* tamanho da fonte */
         }
-        .botao:hover
+        .botao:hover /* sombreado do botão */
         {
-            background-color: whitesmoke;
-            cursor: pointer;
+            background-color: whitesmoke; /* cor do sombreado */
+            cursor: pointer; /* cursor ao passar sobre o botão */
         }
-        .tela
+        .tela /* elemento da tela de login */
         {
-            background-color: rgba(0, 0, 0, 1);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            padding: 60px;
-            border-radius: 15px;
-            color: white;
+            background-color: rgba(0, 0, 0, 1); /* cor da tela de login */
+            position: absolute;  /* usado para indicar que ficará em uma posição fixa */
+            top: 50%;  /* distancia do topo da página */
+            left: 50%; /* distancia da esquerda da página */
+            transform: translate(-50%,-50%); /* usado para corrigir e centralizar o elemento */
+            padding: 60px; /* distancia do topo a baixo do na tela */
+            border-radius: 15px; /* arredondamento da borda */
+            color: white; /* cor das letras da tela */
         }
-        input
+        input /* adicionado ao campos do login */
         {
-            padding: 15px;
-            border: none;
-            outline: none;
-            font-size: 20px;
+            padding: 15px; /* distancia do topo a baixo do campo */
+            border: none; /* retira a borda */
+            outline: none; /* retira a linha em volta */
+            font-size: 20px; /* tamanho da fonte */
         }
     </style>
 </head>
 <body>
-    <div class="tela">
-        <h1>LOGIN</h1>
-        <input type="text" placeholder="Nome">
+    <div class="tela"> <!-- adiciona uma class a tela de login -->
+        <h1>LOGIN</h1> <!-- título de da tela do login -->
+        <input type="text" placeholder="Nome"> <!-- indica o tipo do campo e seu marcador -->
         <br><br>
-        <input type="password" placeholder="Senha">
+        <input type="password" placeholder="Senha"> <!-- indica o tipo do campo e seu marcador -->
         <br><br>
-        <button class="botao">Enviar</button>
+        <button class="botao">Enviar</button>  <!-- indica uma class ao botão e seu nome -->
     </div>
 </body>
 </html>
