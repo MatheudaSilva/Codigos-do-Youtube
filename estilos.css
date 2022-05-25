@@ -17,8 +17,8 @@ h1{
 p{
     color:#89A010; /* cor de fundo*/
     border: black 3px solid ; /*borda com propriedades de cor, espessura e visualização*/
-    padding: 4px 4px 4px 4px;
-    position: relative;
+    padding: 4px 4px 4px 4px; /* distancia do topo a baixo do elemento */
+    position: relative; /* indica a posição sendo ela iniciada no zero */
 }
 li{
     color: gray; /* cor de fundo*/

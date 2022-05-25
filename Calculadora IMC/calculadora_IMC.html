@@ -6,82 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora IMC</title>
     <style>
-        body
+        body /* atribuída ao corpo do texto */
         {
-            font-family: Arial, Helvetica, sans-serif;
-            background-image: linear-gradient(to right, rgb(255, 69, 103), rgb(235, 193, 154));
-            text-align: center;
-            color: white;
+            font-family: Arial, Helvetica, sans-serif; /* fonte do site */
+            background-image: linear-gradient(to right, rgb(255, 69, 103), rgb(235, 193, 154)); /* cor do site */
+            text-align: center; /* alinha o texto ao centro */
+            color: white; /* cor atribuída aos nomes do site */
         }
-        .container
+        .container /* atribuída a caixa da calculadora */
         {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            background-color: rgba(0, 0, 0, 0.4);
-            padding: 1em;
-            border-radius: 10px;
+            position: absolute; /* usado para indicar que ficará em uma posição fixa */
+            top: 50%; /* distancia do topo da página */
+            left: 50%; /* distancia da esquerda da página */
+            transform: translate(-50%,-50%); /* usado para corrigir e centralizar o elemento */
+            background-color: rgba(0, 0, 0, 0.4); /* cor da caixa da calculadora */
+            padding: 1em; /* distancia do topo a baixo do campo */
+            border-radius: 10px; /* arredondamento da borda */
         }
-        button
+        button /* atribuída ao botão */
         {
-            background-color: darkblue;
-            color: white;
-            padding: 8px;
-            border-radius: 10px;
-            cursor: pointer;
-            border: none;
+            background-color: darkblue; /* cor do botão */
+            color: white; /* cor dos caracteres do botão */
+            padding: 8px; /* distancia do topo a baixo do campo */
+            border-radius: 10px; /* arredondamento da borda */
+            cursor: pointer; /* cursor ao passar sobre o botão */
+            border: none; /* retira a borda do botão */
         }
-        button:hover
+        button:hover /* sombreado do botão */
         {
-            background-color: lightskyblue;
+            background-color: rgb(56, 77, 90); /* cor do sombreado */
         }
-        .final-step,
-        .second-step{
-            display: none;
+        .final-step, /* atribuída ao botão */
+        .second-step{ /* atribuída ao botão */
+            display: none; /* retira a borda do botão */
         }
-        input
+        input /* atribuída ao botão */
         {
-            padding: 8px;
-            border-radius: 10px;
-            border: none;
-            outline: none;
+            padding: 8px; /* distancia do topo a baixo do campo */
+            border-radius: 10px; /* arredondamento da borda */
+            border: none; /* retira a borda do botão */
+            outline: none; /* retira a borda em volta do campo */
         }
-        #resultado
+        #resultado /* atribuído ao resultado */
         {
-            font-size: 25px;
+            font-size: 25px; /* tamanho da fonte */
         }
     </style>
 </head>
 <body>
-    <h1>Matheus Silva</h1>
-    <div class="container">
-        <div class="first-step">
-                <p>Clique em Iniciar para calcular</p>
-                <button onclick="go(1,2)">Iniciar</button>
+    <h1>Matheus Silva</h1> <!-- título de maior importancia do site -->
+    <div class="container"> <!-- atribuição da class como "container" -->
+        <div class="first-step"> <!-- atribuição da class como "first-step" -->
+                <p>Clique em Iniciar para calcular</p>  <!-- parágrafo -->
+                <button onclick="go(1,2)">Iniciar</button>  <!-- criação do botão com suas especificações -->
         </div>
-        <div class="second-step">
-            <h3>Calcule seu IMC</h3>
+        <div class="second-step"> <!-- atribuição da class como "second-step" -->
+            <h3>Calcule seu IMC</h3> <!-- título de 3° maior importancia do site -->
             <hr>
-            <label for="peso">Digite seu peso:</label>
-            <input type="number" placeholder="Seu peso" id="peso">
+            <label for="peso">Digite seu peso:</label> > <!-- indicação do campo com sua nomeclatura -->
+            <input type="number" placeholder="Seu peso" id="peso"> <!-- especificações do campo -->
             <br><br>
-            <label for="altura">Digite sua altura:</label>
-            <input type="number" placeholder="Sua altura" id="altura">
+            <label for="altura">Digite sua altura:</label> <!-- indicação do campo com sua nomeclatura -->
+            <input type="number" placeholder="Sua altura" id="altura"> <!-- especificações do campo -->
             <br><br>
-            <button onclick="validate()">Calcular</button>
+            <button onclick="validate()">Calcular</button> <!-- botão com sua especificação de validação -->
         </div>
-        <div class="final-step">
-            <h3>Resultado</h3>
-            <p id="resultado"></p>
+        <div class="final-step"> <!-- atribuição da class como "final-step" -->
+            <h3>Resultado</h3> <!-- título de 3° maior importancia do site -->
+            <p id="resultado"></p> <!-- atribuição do id como "resultado"-->
             <br><br>
-            <button onclick="go(3,2)">Calcular novamente</button>
-            <button onclick="go(3,1)">Retomar ao início</button>
+            <button onclick="go(3,2)">Calcular novamente</button> <!-- criação do botãõ com suas especificações -->
+            <button onclick="go(3,1)">Retomar ao início</button> <!-- criação do botãõ com suas especificações -->
         </div>
     </div>
 </body>
 <script>
-    const firstDiv = document.querySelector('.first-step')
+    const firstDiv = document.querySelector('.first-step') 
     const secondDiv = document.querySelector('.second-step')
     const finalDiv = document.querySelector('.final-step')
 
