@@ -6,142 +6,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <style>
-        body
+        body /* atribuído para o corpo do site */
         {
-            font-family: Arial, Helvetica, sans-serif;
-            background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(172, 163, 118));
+            font-family: Arial, Helvetica, sans-serif; /* fonte do site */
+            background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(172, 163, 118)); /* cor do site */
         }
-        .box
+        .box /* atribuído ao corpo do formulário */
         {
-            color: aquamarine;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            border-radius: 15px;
-            padding: 15px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
+            color: aquamarine; /* cor do formulário */
+            position: absolute; /* usado para indicar que ficará em uma posição fixa */
+            top: 50%; /* distancia do topo da página */
+            left: 50%; /* distancia da esquerda da página */
+            transform: translate(-50%,-50%); /* usado para corrigir e centralizar o elemento */
+            border-radius: 15px; /* arredondamento da borda */
+            padding: 15px; /* distancia do topo a baixo do campo */
+            background-color: rgba(0, 0, 0, 0.7); /* cor do formulário */
         }
-        fieldset
+        fieldset /* atribuído a borda em volta do formulário */
         {
-            border: 3px solid aquamarine;
+            border: 3px solid aquamarine; /* borda adicionada com especificações de cor, tipo e tamanho */
         }
-        legend
+        legend /* atribuído ao nome no formulário */
         {
-            border: 1px solid aquamarine;
-            padding: 10px;
-            text-align: center;
-            background-color: aquamarine;
-            border-radius: 5px;
-            color: black;
+            border: 1px solid aquamarine; /* borda adicionada com especificações de cor, tipo e tamanho */
+            padding: 10px; /* distancia do topo a baixo do campo */
+            text-align: center; /* alinha o texto ao centro */
+            background-color: aquamarine; /* cor do nome no formulário */
+            border-radius: 5px; /* arredondamento da borda */
+            color: black; /* cor dos caracteres */
         }
-        .inputBox
+        .inputBox /* atribuído ao campos do formulário */
         {
-            position: relative;
+            position: relative; /* indica a posição sendo ela iniciada no zero */
         }
-        .inputUser
+        .inputUser /* atribuído ao campos do formulário */
         {
-            background: none;
-            border: none;
-            border-bottom: 1px solid aquamarine;
-            outline: none;
-            color: white;
-            font-size: 15px;
-            width: 100%;
-            letter-spacing: 1px;
+            background: none; /* retira a cor dos campos */
+            border: none; /* retira a borda dos campos */
+            border-bottom: 1px solid aquamarine; /* trasforma o campo em uma linha */
+            outline: none; /* retira a borda em volta do campo */
+            color: white; /* cor atribuída ao nome do campo ao clicar */
+            font-size: 15px; /* tamanho da fonte */
+            width: 100%; /* largura da linha */
+            letter-spacing: 1px; /* usada para controlar o espaço em branco entre as letras */
         }
-        .labelInput
+        .labelInput /* atribuído ao campos do formulário */
         {
-            position: absolute;
-            pointer-events: none;
-            transition: .5s;   
-            top: 0px;
-            left: 0px;
+            position: absolute; /* usado para indicar que ficará em uma posição fixa */
+            pointer-events: none; /* usado para liberar o campo ao clicar no nome */
+            transition: .5s; /* transição do nome ao clicar */
+            top: 0px; /* distancia do topo da página */
+            left: 0px; /* distancia da esquerda da página */
         }
-        .inputUser:focus ~ .labelInput,
-        .inputUser:valid ~ .labelInput{
-            top: -20px;
-            font-size: 12px;
-            color: white;
+        .inputUser:focus ~ .labelInput, /* atribuído ao campos do formulário */
+        .inputUser:valid ~ .labelInput{ /* atribuído ao campos do formulário */
+            top: -20px; /* distancia do topo da página */
+            font-size: 12px; /* tamanho da fonte */
+            color: white; /* cor atribuída ao campo */
         }
-        #data_nascimento
+        #data_nascimento /* atribuída ao campo "data de nascimento" */
         {
-            border: none;
-            padding: 8px;
-            border-radius: 10px;
-            outline: none;
-            font-size: 15px;
-            font-family: Arial, Helvetica, sans-serif;
+            border: none; /* retira a borda dos campos */
+            padding: 8px; /* distancia do topo a baixo do campo */
+            border-radius: 10px; /* arredondamento da borda */
+            outline: none; /* retira a borda em volta do campo */
+            font-size: 15px; /* tamanho da fonte */
+            font-family: Arial, Helvetica, sans-serif; /* fonte do site */
         }
-        #submit
+        #submit /* atribuída ao campo "botão" */
         {
-            background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(172, 163, 118));
-            width: 100%;
-            padding: 9px; 
-            font-size: 20px;
-            border-radius: 12px;
-            border: none;
-            cursor: pointer;
+            background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(172, 163, 118)); /* cor do botão */
+            width: 100%; /* largura da linha */
+            padding: 9px; /* distancia do topo a baixo do botão */
+            font-size: 20px; /* tamanho da fonte */
+            border-radius: 12px; /* arredondamento da borda */
+            border: none; /* retira a borda do botão */
+            cursor: pointer; /* cursor ao passar sobre o botão */
         }
-        #submit:hover
+        #submit:hover /* sombreado do botão */
         {
-            background-image: linear-gradient(to right, rgb(204, 202, 202), rgb(169, 164, 137));
+            background-image: linear-gradient(to right, rgb(204, 202, 202), rgb(169, 164, 137)); /* cor do botão */
         }
     </style>
 </head>
 <body>
-    <div class="box">
-        <form action="">
+    <div class="box"> <!-- atribuição da class como "box"-->
+        <form action=""> <!-- início do formulário-->
             <fieldset>
-                <legend><b>Formulário de Clientes</b></legend>
+                <legend><b>Formulário de Clientes</b></legend> <!-- nome do formulãrio-->
                 <br>
-                <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
-                    <label for="Nome" class="labelInput">Nome Completo</label>
+                <div class="inputBox"> <!-- atribuição da class como "InputBox"-->
+                    <input type="text" name="nome" id="nome" class="inputUser" required> <!-- atribuição do input como as especificações-->
+                    <label for="Nome" class="labelInput">Nome Completo</label> <!-- atribuição do nome do campo com suas especificações-->
                 </div>
                 <br><br>
-                <div class="inputBox">
-                    <input type="text" name="email" id="email" class="inputUser" required>
-                    <label for="Nome" class="labelInput">E-mail</label>
+                <div class="inputBox"> <!-- atribuição da class como "InputBox"-->
+                    <input type="text" name="email" id="email" class="inputUser" required> <!-- atribuição do input como as especificações-->
+                    <label for="Nome" class="labelInput">E-mail</label> <!-- atribuição do nome do campo com suas especificações-->
                 </div>
                 <br><br>
-                <div class="inputBox">
-                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
-                    <label for="Nome" class="labelInput">Telefone</label>
+                <div class="inputBox"> <!-- atribuição da class como "InputBox"-->
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required> <!-- atribuição do input como as especificações-->
+                    <label for="Nome" class="labelInput">Telefone</label> <!-- atribuição do nome do campo com suas especificações-->
                 </div>
                 <p>Sexo: </p>
-                <input type="radio" id="feminino" name="genero" value="feminino" required>
-                <label for="feminino">Feminino</label>
+                <input type="radio" id="feminino" name="genero" value="feminino" required> <!-- atribuição do input como as especificações-->
+                <label for="feminino">Feminino</label> <!-- atribuição do nome do campo com suas especificações-->
                 <br>
-                <input type="radio" id="masculino" name="genero" value="masculino" required>
-                <label for="masculino">Masculino</label>
+                <input type="radio" id="masculino" name="genero" value="masculino" required> <!-- atribuição do input como as especificações-->
+                <label for="masculino">Masculino</label> <!-- atribuição do nome do campo com suas especificações-->
                 <br>
-                <input type="radio" id="outro" name="genero" value="outro" required>
-                <label for="outro">Outro</label>
+                <input type="radio" id="outro" name="genero" value="outro" required> <!-- atribuição do input como as especificações-->
+                <label for="outro">Outro</label> <!-- atribuição do nome do campo com suas especificações-->
                 <br>
-                <input type="radio" id="prefiro não responder" name="genero" value="prefiro não responder" required>
-                <label for="prefiro não responder">Prefiro não responder</label>
+                <input type="radio" id="prefiro não responder" name="genero" value="prefiro não responder" required> <!-- atribuição do input como as especificações-->
+                <label for="prefiro não responder">Prefiro não responder</label> <!-- atribuição do nome do campo com suas especificações-->
                 <br><br>
-                    <label for="data_nascimento"><b>Data de nascimento: </b></label>
-                    <input type="date" name="data_nascimento" id="data_nascimento" required>
+                    <label for="data_nascimento"><b>Data de nascimento: </b></label> <!-- atribuição do nome do campo com suas especificações-->
+                    <input type="date" name="data_nascimento" id="data_nascimento" required> <!-- atribuição do input como as especificações-->
                 <br><br>
-                <div class="inputBox">
-                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
-                    <label for="cidade" class="labelInput">Cidade</label>
+                <div class="inputBox"> <!-- atribuição da class como "InputBox"-->
+                    <input type="text" name="cidade" id="cidade" class="inputUser" required> <!-- atribuição do input como as especificações-->
+                    <label for="cidade" class="labelInput">Cidade</label> <!-- atribuição do nome do campo com suas especificações-->
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="estado" id="estado" class="inputUser" required>
-                    <label for="estado" class="labelInput">Estado</label>
+                    <input type="text" name="estado" id="estado" class="inputUser" required> <!-- atribuição do input como as especificações-->
+                    <label for="estado" class="labelInput">Estado</label> <!-- atribuição do nome do campo com suas especificações-->
                 </div>
                 <br><br>
-                <div class="inputBox">
-                    <input type="text" name="endereço" id="endereço" class="inputUser" required>
-                    <label for="endereço" class="labelInput">Endereço</label>
+                <div class="inputBox"> <!-- atribuição da class como "InputBox"-->
+                    <input type="text" name="endereço" id="endereço" class="inputUser" required> <!-- atribuição do input como as especificações-->
+                    <label for="endereço" class="labelInput">Endereço</label> <!-- atribuição do nome do campo com suas especificações-->
                 </div>
                 <br><br>
-                <input type="submit" name="submit" id="submit">
+                <input type="submit" name="submit" id="submit"> <!-- atribuição do submit como as especificações-->
             </fieldset>
         </form>
     </div>
