@@ -6,45 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header MS</title>
     <style>
-        :root
+        :root /* vars de cores */
         {
-            --color-white: #fff;
-            --color-dark1: rgb(39, 39, 39);
-            --color-dark2: #2d2d2d;
-            --color-dark3: #414141;
-            --color-dark4: #1c1c1c;
-            --color-dark5: #343434;
-            --color-purple: #b040ff;
+            --color-white: #fff; /* var com cor branca */
+            --color-dark1: rgb(39, 39, 39); /* var com cor rgb(39, 39, 39) */
+            --color-dark2: #2d2d2d; /* var com cor #2d2d2d */
+            --color-dark3: #414141; /* var com cor #414141 */
+            --color-dark4: #1c1c1c; /* var com cor #1c1c1c */
+            --color-dark5: #343434; /* var com cor #343434 */
+            --color-purple: #b040ff; /* var com cor #b040ff */
         }
-        *
+        * /* atribuído a todo o site */
         {
-            margin: 0;
-            padding: 0;
+            margin: 0; /* distancia da margem */
+            padding: 0; /* distancia do topo a baixo do campo */
         }
-        body
+        body /* atribído ao corpo do site */
         {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: var(--color-dark1);
-            color: var(--color-white);
+            font-family: Arial, Helvetica, sans-serif; /* fonte do site */
+            background-color: var(--color-dark1); /* cor de fundo do site usando uma var */
+            color: var(--color-white); /* cor das letras do site usando uma var */
         }
-        .img_logo_header{
-            width: 45px;
+        .img_logo_header{ /* atribuído a imagem de logo */
+            width: 45px; /* largura do elemento */
         }
-        .header,
-        .navigation_header{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
+        .header, /* atribuído ao header */
+        .navigation_header{ /* atribuído a navegação do header */
+            display: flex; /* organiza o header em um "conteiner" para melhor organiza-ló */
+            flex-direction: row; 
+            align-items: center; /* alinhando os itens ao centro do header */
         }
-        .header{
-            background-color: var(--color-dark2);
-            justify-content: space-between;
+        .header{ /* atribuído ao header */
+            background-color: var(--color-dark2); /* cor do header do site usando uma var */
+            justify-content: space-between; 
             padding: 0 10%;
-            height: 3.5em;
-            box-shadow: 1px 1px 4px var(--color-dark4);
+            height: 3.5em; /* altura do header do site */
+            box-shadow: 1px 1px 4px var(--color-dark4); /* cor do sombreado do header usando uma var */
         }
-        .navigation_header{
-            gap: 3em;
+        .navigation_header{ /* atribuído a navegação do header */
+            gap: 3em; /* distancia dos itens no header */
             z-index: 2;
         }
         .content{

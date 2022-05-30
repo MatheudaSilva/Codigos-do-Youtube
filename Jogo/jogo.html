@@ -28,11 +28,15 @@
 
             desenha: function(){ // Funcão usada para desenhar na tela a var chão
                 ctx.fillStyle = this.cor; // Indica que a cor acima atribuída deve ser adicionada a var chão
-                ctx.fillRect = (0, this.y, LARGURA, this.altura); // Indica que a var chão recebe quanto será usado do elemento, sua largura no elemento e sua altura atribuída acima
+                ctx.fillRect(0, this.y, LARGURA, this.altura); // Indica que a var chão recebe quanto será usado do elemento, sua largura no elemento e sua altura atribuída acima
             }
+        },
+
+        bloco =
+        {
+            x: 50, 
+            y: 0,
         }
-        
-        ;
 
         function main()
         {
@@ -74,6 +78,8 @@
         {
             ctx.fillStyle = " #50beff";
             ctx.fillRect(0, 0, LARGURA, ALTURA);
+
+            chao.desenha(); // para acessar a função chão e com o método desenha 
         }
 
         main(); // inicializa o jogo
