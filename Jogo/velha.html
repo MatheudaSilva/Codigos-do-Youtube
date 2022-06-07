@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jogo da velha</title>
+    <style>
+        .x /* atrbuído ao p */
+        {
+            float: left; /* faz com que o elemento flutue a esquerda do bloco */ 
+            margin-right: 10px; /* faz com que distancie a imagem x do p */
+            
+        }
+        #mostrador /* atribuído ao div com id mostrador*/
+        {
+            margin: auto; /* distancia automática */
+            margin-top: 40px; /* distancia do topo da página */
+            width: 252px; /* largura da div */
+            height: 80px; /* altura da div */
+            
+        }
+        .espaco /* atribuido ao div com class espaco */
+        {
+            width: 80px; /* largura da div */
+            height: 60px; /* altura da div */
+            border: 2px solid black; /* borda com expessura, sólida e cor preta */
+            float: left; /* faz com que o elemento flutue a esquerda do bloco */
+            text-align: center; /* alinha o texto ao centro */
+            padding-top: 20px;
+        }
+        .tabuleiro /* atribuido ao div com class tabuleiro */
+        {
+            width: 252px; /* largura da div */
+            height: 252px; /* altura da div */
+            margin: auto; /* distancia automática */
+        }
+        img /* atibuido a imagem X */
+        {
+            width: 50px; /* largura da imagem */
+            height: 50px; /* altura da imagem */
+        }
+
+    </style>
+</head>
+<body>
+    <div id="mostrador"> <!-- div com id denominada mostrador -->
+        <p class="x">Vez do jogador:</p> <!-- parágrafo com class denominada x-->
+        <img src="" border="0" height="50"> <!-- imagem do X, sem borda e 50px de altura-->
+    </div>
+
+    <div class="tabuleiro"> <!-- div com class denominada tabuleiro -->
+        <div id="a1" class="espaco" jogada=""><img src="" id="X1"></div> <!-- div com id denominada a1, class denominada espaco, imagem com id denominada X1 e com criação de "jogada" -->
+        <div id="a2" class="espaco" jogada=""><img src="" id="X2"></div> <!-- div com id denominada a2, class denominada espaco, imagem com id denominada X2 e com criação de "jogada" -->
+        <div id="a3" class="espaco" jogada=""><img src="" id="X3"></div> <!-- div com id denominada a3, class denominada espaco, imagem com id denominada X3 e com criação de "jogada" -->
+
+        <div id="a4" class="espaco" jogada=""><img src="" id="X4"></div> <!-- div com id denominada a4, class denominada espaco, imagem com id denominada X4 e com criação de "jogada" -->
+        <div id="a5" class="espaco" jogada=""><img src="" id="X5"></div> <!-- div com id denominada a5, class denominada espaco, imagem com id denominada X5 e com criação de "jogada" -->
+        <div id="a6" class="espaco" jogada=""><img src="" id="X6"></div> <!-- div com id denominada a6, class denominada espaco, imagem com id denominada X6 e com criação de "jogada" -->
+
+        <div id="a7" class="espaco" jogada=""><img src="" id="X7"></div> <!-- div com id denominada a7, class denominada espaco, imagem com id denominada X7 e com criação de "jogada" -->
+        <div id="a8" class="espaco" jogada=""><img src="" id="X8"></div> <!-- div com id denominada a8, class denominada espaco, imagem com id denominada X8 e com criação de "jogada" -->
+        <div id="a9" class="espaco" jogada=""><img src="" id="X9"></div> <!-- div com id denominada a9, class denominada espaco, imagem com id denominada X9 e com criação de "jogada" -->
+
+    </div>
+
+    <script type="text/javascript" src="velha.js"></script> <!-- cria uma "ponte" que liga com o documento js-->
+</body>
+</html>
