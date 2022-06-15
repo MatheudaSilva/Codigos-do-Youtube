@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokenpo</title>
+    <style>
+        img /* atibuido a imagem  */
+        {
+            width: 50px; /* largura da imagem */
+            height: 50px; /* altura da imagem */
+        }
+        * /* atribuído a todos os elementos do site */
+        {
+            font-family: Arial, Helvetica, sans-serif; /* fonte atribuída ao site */
+            font-weight: 400; /* diminui a grossora das palavras */
+        }
+        #placar /* atibuido a div com id placar */
+        {
+            display:flex; /* coloca todos os itens na horizontal */
+            align-items: center; /* alinha os itens ao centro */
+            justify-content: center;
+        }
+
+        #jogador, #computador /* atibuido a div com id jogador e computador */
+        {
+            position: relative; /* usado para indicar que ficará em uma posição livre */
+            flex-grow: 1;
+            border-radius: 5px; /* usado para arredondamento da borda */
+            width: 200px; /* largura atribuída a div */
+            padding: 20px; /* distancia da div */
+            color: #fff; /* cor atrbuída */
+        }
+
+        #jogador /* atibuido a div com id jogador */
+        {
+            background-color: #e67e22; /* cor atrbuída */
+        }
+
+        #computador /* atibuido a div com id e computador */
+        {
+            background-color: #3498db; /* cor atrbuída */
+        }
+        #jogador-escolha, #computador-escolha
+        {
+            list-style: none; /* retira a indicação de lista */
+            margin: 0;
+            padding: 0;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div id="principal"> <!-- div com id denominado prinipal -->
+        <h1 id="titulo">Jokenpo</h1> <!--h1 com id denominado titulo -->
+        <div id="placar"> <!-- div com id denominado placar -->
+            <div id="jogador"> <!-- div com id denominado jogador -->
+                <h2 id="jogador-nome">Matheus</h2> <!--h1 com id denominado jogador-nome e "Matheus" -->
+                <span id="jogador-pontos">0</span> <!--span com id denominado jogador-pontos e "0"  -->
+
+                <ul id="jogador-escolha"> <!--lista não ordenada com id denominado jogador-escolha -->
+                    <li><a id="jogador-escolha-1"><img src="img/pedra.png" alt=""></a></li> <!--item da lista com id denominado jogador-escolha-1 -->
+                    <li><a id="jogador-escolha-2"><img src="img/papel.png" alt=""></a></li> <!--item da lista com id denominado jogador-escolha-2 -->
+                    <li><a id="jogador-escolha-3"><img src="img/tesoura.png" alt=""></a></li> <!--item da lista com id denominado jogador-escolha-3 -->
+                </ul>
+            
+            </div>
+
+            <div id="versus">vs</div> <!-- div com id denominado versus e "vs" --> 
+
+            <div id="computador"> <!-- div com id denominado jogador -->
+                <h2 id="computador-nome">Computador</h2> <!--h1 com id denominado jogador-nome e "Matheus" -->
+                <span id="computador-pontos">0</span> <!--span com id denominado jogador-pontos e "0"  -->
+
+                <ul id="computador-escolha"> <!--lista não ordenada com id denominado jogador-escolha -->
+                    <li><a id="computador-escolha-1"><img src="img/pedra.png" alt=""></a></li> <!--item da lista com id denominado jogador-escolha-1 -->
+                    <li><a id="computador-escolha-2"><img src="img/papel.png" alt=""></a></li> <!--item da lista com id denominado jogador-escolha-2 -->
+                    <li><a id="computador-escolha-3"><img src="img/tesoura.png" alt=""></a></li> <!--item da lista com id denominado jogador-escolha-3 -->
+                </ul>
+            
+            </div>
+        </div> 
+    </div>
+</body>
+</html>
