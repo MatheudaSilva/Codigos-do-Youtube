@@ -87,10 +87,7 @@
         {
             background-image: linear-gradient(to right, rgb(204, 202, 202), rgb(169, 164, 137)); /* cor do botão */
         }
-        a
-        {
-            text-decoration: none; /* retira o sublinhado */
-        }
+
     </style>
 </head>
 <body>
@@ -105,7 +102,7 @@
                 </div>
                 <br><br>
                 <div class="inputBox"> <!-- atribuição da class como "InputBox"-->
-                    <input type="text" name="email" id="email" class="inputUser" required> <!-- atribuição do input como as especificações-->
+                    <input type="email" name="email" id="email" class="inputUser" required> <!-- atribuição do input como as especificações-->
                     <label for="Nome" class="labelInput">E-mail</label> <!-- atribuição do nome do campo com suas especificações-->
                 </div>
                 <br><br>
@@ -144,7 +141,7 @@
                     <label for="endereço" class="labelInput">Endereço</label> <!-- atribuição do nome do campo com suas especificações-->
                 </div>
                 <br><br>
-                <button type="submit" name="submit" id="submit"><a href="login.html">Enviar</a></button> <!-- atribuição do submit como as especificações-->
+                <input type="submit" name="submit" id="submit"><a href="login.html" required></a></input> <!-- atribuição do submit como as especificações-->
             </fieldset>
         </form>
     </div>
